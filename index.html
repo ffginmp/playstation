@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leitício Informática — Destravamos PlayStation</title>
+  <meta name="description" content="Leitício Informática: manutenção, upgrades e destravamento profissional de PlayStation. Atendimento rápido e confiável." />
+  <meta property="og:title" content="Leitício Informática — Destravamos PlayStation" />
+  <meta property="og:description" content="Assistência técnica profissional com aquele toque de nostalgia gamer." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f172a'/%3E%3Cpath d='M20 22c8-12 24-6 24 6s-8 14-16 14S12 34 20 22z' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#0f172a;           /* slate-900 */
+      --card:#0b1223;         /* slightly darker for depth */
+      --text:#e5e7eb;         /* gray-200 */
+      --muted:#94a3b8;        /* slate-400 */
+      --brand:#38bdf8;        /* sky-400 */
+      --accent:#22d3ee;       /* cyan-400 */
+      --ok:#10b981;           /* emerald-500 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:radial-gradient(1200px 800px at 80% -10%, #172554 0%, var(--bg) 60%);}
+    body{font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background-color:#0f172acc; border-bottom:1px solid #1f2937; z-index:50}
+    header .row{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo svg{width:36px;height:36px}
+    .brand{display:flex;flex-direction:column}
+    .brand strong{font-size:18px;letter-spacing:.2px}
+    .brand span{font-size:12px;color:var(--muted);margin-top:-2px}
+    nav a{margin-left:20px;font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#001018;font-weight:800;box-shadow:0 8px 24px rgba(34,211,238,.2)}
+    .btn:active{transform:translateY(1px)}
+    .hero{position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:64px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:#06131a;background:linear-gradient(135deg,#a5f3fc,#67e8f9);border-radius:999px;padding:6px 12px;font-weight:700}
+    h1{font-size: clamp(28px, 3.8vw, 48px);line-height:1.15;margin:14px 0 8px}
+    .subtitle{font-size:clamp(16px,1.8vw,20px);color:var(--muted)}
+    .cta{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
+    .ghost{padding:12px 16px;border:1px solid #1f2b45;border-radius:14px;color:var(--text)}
+    .card{background:linear-gradient(180deg,var(--card),rgba(15,23,42,.5));border:1px solid #1f2937;border-radius:20px;padding:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-3 .card h3{margin:.2rem 0 .4rem;font-size:18px}
+    .ps-iso{position:relative;aspect-ratio:4/3;border-radius:24px;isolation:isolate;background:
+      radial-gradient(120px 40px at 60% 35%, rgba(255,255,255,.12), rgba(255,255,255,0) 60%),
+      linear-gradient(180deg,#0a0f1f 0%, #0b1223 80%);}
+    .ps-iso:before{ /* “silhueta PS1” estilizada, sem marcas */
+      content:"";
+      position:absolute;inset:14% 10% 18% 10%;
+      border-radius:28px;
+      background:
+        radial-gradient(110px 110px at 50% 62%, #111827 0%, #0d1426 60%),
+        linear-gradient(180deg,#141c33 0,#0d162b 100%);
+      box-shadow: inset 0 0 0 2px #1f2b45, 0 20px 60px rgba(0,0,0,.35);
+    }
+    .ps-iso:after{ /* tampo circular */
+      content:"";
+      position:absolute;inset:23% 22% 34% 22%;
+      border-radius:999px;
+      background:radial-gradient(closest-side, #0f172a, #0b1223 70%);
+      box-shadow: inset 0 0 0 2px #22304f, inset 0 10px 30px rgba(0,0,0,.45);
+    }
+    section{padding:56px 0}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .kpis .card{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+    .kpis .n{font-size:28px;font-weight:900;color:#a5f3fc}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .price .h{font-size:20px;font-weight:800}
+    .price .v{font-size:32px;font-weight:900}
+    footer{border-top:1px solid #1f2937;background:#0c1326}
+    .foot{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;padding:22px 0;color:var(--muted);font-size:14px}
+    .tiny{font-size:12px;color:#6b7280}
+    @media (max-width: 960px){
+      .hero .wrap{grid-template-columns:1fr;gap:24px}
+      .grid-3,.pricing{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,1fr)}
+    }
+    /* Splash logo (branco) no canto da hero */
+    .splash{
+      position:absolute;top:-24px;left:-16px;width:min(22vw,120px);opacity:.9;z-index:0;filter:drop-shadow(0 8px 24px rgba(255,255,255,.08))
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container row">
+    <div class="logo">
+      <!-- Logotipo splash branco (SVG) -->
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path fill="#fff" d="M65 7c8 3 8 16 16 20 8 4 18-3 17 6-1 10-12 7-16 14s5 14-3 20-12-2-19 2c-7 4-6 16-15 15-9-1-6-12-12-17S16 72 12 63c-4-9 9-12 11-20 2-8-9-16-3-22 6-6 13 2 20 0s10-18 25-14Z"/>
+      </svg>
+      <div class="brand">
+        <strong>Leitício Informática</strong>
+        <span>Assistência & Consoles</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#precos">Preços</a>
+      <a href="#contato" class="btn">Fale no WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <svg class="splash" viewBox="0 0 100 100" aria-hidden="true">
+      <path fill="#ffffff" d="M65 7c8 3 8 16 16 20 8 4 18-3 17 6-1 10-12 7-16 14s5 14-3 20-12-2-19 2c-7 4-6 16-15 15-9-1-6-12-12-17S16 72 12 63c-4-9 9-12 11-20 2-8-9-16-3-22 6-6 13 2 20 0s10-18 25-14Z"/>
+    </svg>
+    <div class="container wrap">
+      <div>
+        <span class="badge">✓ Profissional de verdade — meme só no slogan</span>
+        <h1>Manutenção, upgrades e <span style="color:var(--accent);">destravamento</span> de PlayStation</h1>
+        <p class="subtitle">Atendimento rápido, peças de qualidade e aquele cuidado de loja raiz. <strong>“Destravamos PlayStation”</strong> — mas fazemos tudo o que uma informática séria faz.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/5599999999999?text=Olá%20Leitício%20Informática!" target="_blank" rel="noopener">Quero um orçamento</a>
+          <a class="ghost" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <div class="ps-iso card" aria-label="Imagem conceitual de um PlayStation clássico"></div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <div class="grid-3">
+        <article class="card">
+          <h3>Destravamento seguro</h3>
+          <p>Desbloqueio com configurações estáveis e teste completo pós-serviço. Preservamos desempenho e integridade do console.</p>
+        </article>
+        <article class="card">
+          <h3>Manutenção preventiva</h3>
+          <p>Limpeza, troca de pasta térmica, revisão elétrica e troca de componentes desgastados para aumentar a vida útil.</p>
+        </article>
+        <article class="card">
+          <h3>Upgrades & mods</h3>
+          <p>Armazenamento, ventilação, leitores e ajustes finos. Entrega com relatório técnico e fotos.</p>
+        </article>
+      </div>
+
+      <div class="kpis" style="margin-top:18px;">
+        <div class="card"><div class="n">24h</div><div class="tiny">prazo médio de diagnóstico</div></div>
+        <div class="card"><div class="n">+500</div><div class="tiny">consoles já atendidos</div></div>
+        <div class="card"><div class="n">90 dias</div><div class="tiny">garantia de serviço</div></div>
+        <div class="card"><div class="n">5★</div><div class="tiny">avaliação média dos clientes</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precos">
+    <div class="container">
+      <h2 style="margin:0 0 12px">Faixas de preço</h2>
+      <p class="subtitle">Valores base para consulta. Orçamento fechado após diagnóstico gratuito.</p>
+      <div class="pricing" style="margin-top:14px">
+        <div class="card price">
+          <div class="h">Diagnóstico</div>
+          <div class="v">R$ 0</div>
+          <p class="tiny">Análise inicial e laudo simplificado.</p>
+        </div>
+        <div class="card price">
+          <div class="h">Manutenção preventiva</div>
+          <div class="v">R$ 149–249</div>
+          <p class="tiny">Limpeza, pasta térmica e testes.</p>
+        </div>
+        <div class="card price">
+          <div class="h">Destravamento</div>
+          <div class="v">R$ 199–399</div>
+          <p class="tiny">Inclui configuração estável e validação.</p>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:18px">
+        <a class="btn" href="mailto:contato@leiticioinformatica.example">Pedir orçamento por e-mail</a>
+        <a class="ghost" href="#contato">Endereço & horários</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="card" style="display:grid;grid-template-columns:1.2fr 1fr;gap:18px">
+        <div>
+          <h2 style="margin:0 0 8px">Fale com a gente</h2>
+          <p class="tiny">Seg–Sex, 9h às 18h • Sáb, 9h às 13h</p>
+          <ul>
+            <li>WhatsApp: <a href="https://wa.me/5599999999999" target="_blank" rel="noopener">(99) 99999-9999</a></li>
+            <li>E-mail: <a href="mailto:contato@leiticioinformatica.example">contato@leiticioinformatica.example</a></li>
+            <li>Endereço: Rua Exemplo, 123 — Centro, Sua Cidade</li>
+          </ul>
+        </div>
+        <form class="card" style="background:#0f1a33">
+          <label class="tiny">Seu nome</label>
+          <input required placeholder="Seu nome" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1f2b45;background:#0b1223;color:var(--text);margin:6px 0 10px">
+          <label class="tiny">Como podemos ajudar?</label>
+          <textarea required placeholder="Descreva o problema do seu console" rows="4" style="width:100%;padding:12px;border-radius:10px;border:1px solid #1f2b45;background:#0b1223;color:var(--text);margin:6px 0 10px"></textarea>
+          <button type="submit" class="btn" onclick="alert('Este formulário é ilustrativo. Use WhatsApp ou e-mail.');return false;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <span>© <span id="y"></span> Leitício Informática — Todos os direitos reservados.</span>
+    <span class="tiny">Este site é fictício e usado para fins humorísticos/portfólio.</span>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
